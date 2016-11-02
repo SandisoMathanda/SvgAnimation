@@ -2,9 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+      <link rel="stylesheet" href="svg.css">
   </head>
-  <body>
-    <h1> svg project </h1>
-    <p> This is the story of my project>
+
+  <body >
+    <div id="everything" style="background-image: url(http://farmforward.com/wp-content/uploads/2012/03/empty_768.jpg)">
+      <h1> svg project </h1>
+      <p> This is the story of my project </p>
+    <svg width="100%" viewBox="0 0 100 100" >
+      <!-- Fish -->
+    <image xlink:href="images/orangeFish2.png" x="0" y="20" width="9" height="9" opacity="1">
+      <animate id="orangeFishHR" attributeName="x" from="0" to="100" dur="3s" begin="0s; orangeFishHR.end" fill="freeze"/>
+          <animate id="orangeFishVU" attributeName="y" from="20" to="21" dur=".2s" begin="0s; orangeFishVD.end" fill="freeze"/>
+          <animate id="orangeFishVD" attributeName="y" from="21" to="20" dur=".2s" begin="orangeFishVU.end" fill="freeze"/>
+
+    </image>
+<!-- Shark -->
+    <image xlink:href="images/sharkAttack.gif" x="40" y="10" width="5" height="5" opacity="1">
+      <animate attributeName="width" from="5" to="50" dur="1s" begin="click" fill="freeze"/>
+      <animate attributeName="height" from="5" to="50" dur="1s" begin="click" fill="freeze"/>
+      <animate attributeName="opacity" from="0" to="1" dur="1s" begin="click" fill="freeze"/>
+      <animate attributeName="x" from="40" to="20" dur="1s" begin="click" fill="freeze"/>
+      <animate attributeName="y" from="10" to="5" dur="1s" begin="click" fill="freeze"/>
+    </image>
+
+<!-- Bubbles -->
+    <circle cx="10" cy="30" r="1" style="stroke: black; fill:blue; stroke-width: .2px" >
+      <animate id="bubble1" attributeName="cy" from="30" to="5" dur="3s" begin="0s; bubble1.end" fill="freeze"/>
+    </circle>
+
+    <circle cx="50" cy="30" r="1" style="stroke: black; stroke-width: .2px">
+      <animate id="bubble2" attributeName="cy" from="30" to="5" dur="10s" begin="0s; bubble2.end" fill="freeze"/>
+    </circle>
+
+    <circle cx="700" cy="30" r="1" style="stroke: black; stroke-width: .2px">
+      <animate id="bubble3" attributeName="cy" from="30" to="5" dur="7s" begin="0s; bubble3.end" fill="freeze"/>
+  </circle>
+
+    <circle cx="90" cy="30" r="1" style="stroke: black; stroke-width: .2px">
+      <animate id="bubble4 "attributeName="cy" from="30" to="5" dur="5s" begin="0s; bubble4.end" fill="freeze"/>
+  </circle>
+
+
+
+</svg>
+</div>
+
+
+
   </body>
 </html>
