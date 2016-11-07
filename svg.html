@@ -15,40 +15,50 @@
       <animate id="orangeFishHR" attributeName="x" from="0" to="100" dur="3s" begin="0s; orangeFishHR.end" fill="freeze"/>
           <animate id="orangeFishVU" attributeName="y" from="20" to="21" dur=".2s" begin="0s; orangeFishVD.end" fill="freeze"/>
           <animate id="orangeFishVD" attributeName="y" from="21" to="20" dur=".2s" begin="orangeFishVU.end" fill="freeze"/>
+          <animate id="orangeFishDie" attributeName="opacity" from="1" to="0" dur="1s" begin="2s; orangeFishDie.end" fill="freeze" />
 
     </image>
 
+    <image xlink:href="images/sharkattack2.gif" x="-30" y="10" width="20" height="20" opacity="1">
+      <animate id="sharkattackHR" attributeName="x" from="-30" to="100" dur="3s" begin="0s; sharkattackHR.end" fill="freeze"/>
+          <animate id="sharkattackVU" attributeName="y" from="10" to="13" dur=".2s" begin="0s; sharkattackVD.end" fill="freeze"/>
+          <animate id="sharkattackVD" attributeName="y" from="13" to="10" dur=".2s" begin="sharkattackVU.end" fill="freeze"/>
+        </image>
+
     <!-- whale -->
 
- <rect x="70" y="35" width="14" height="8" fill="grey" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-<animate id="body" attributeName="x" from="70" to="-30" dur="5s" begin="click; back.begin" fill="freeze" />
-<animate attributeName="x" from="100" to="-30" dur="6s" begin="body.end" fill="freeze" />
+ <rect x="70" y="35" width="14" height="8" fill="grey" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="1">
+<animate id="body" attributeName="opacity" from="1" to="0" dur="2s" begin="click; back.begin; body.end" fill="freeze"  />
+
 
  </rect>
 
-  <polygon points="84,34 84,44 93,44" fill="grey">
-    <animate id="back" attributeName="points" from="84" to="-26" dur="5s" begin="click; back2.begin" fill="freeze" />
-    <animate attributeName="points" from="114" to="-26" dur="6s" begin="back.end" fill="freeze" />
+  <polygon points="84,34 84,44 93,44" fill="grey" opacity="1">
+    <animate id="back" attributeName="opacity" from="1 " to="0" dur="2s" begin="click; body.begin" fill="freeze" />
+
     </polygon>
 
-    <polygon points="87,44 95,35 93,44" fill="grey">
-      <animate id="back2" attributeName="points" from="87" to="-23" dur="5s" begin="click; tail.begin" fill="freeze" />
-      <animate attributeName="points" from="117" to="-23" dur="6s" begin="back2.end" fill="freeze" />
+    <polygon points="87,44 95,35 93,44" fill="grey"opacity="1">
+      <animate id="back2" attributeName="opacity" from="1 " to="0" dur="2s"begin="click; body.begin" fill="freeze" />
+
       </polygon>
 
-      <polygon points="88,32 94,35 99,33 93,40 " fill="grey">
-        <animate id="tail" attributeName="points" from="88" to="-22" dur="5s" begin="click; eye.begin" fill="freeze" />
-        <animate attributeName="points" from="118" to="-22" dur="6s" begin="tail.end" fill="freeze" />
-        </polygon>
+      <polygon points="88,32 94,35 99,33 93,40 " fill="grey" opacity="1">
+        <animate id="tail" attributeName="opacity" from="1 " to="0" dur="2s" begin="click; eye.begin" fill="freeze" />
+      </polygon>
 
-        <circle cx="71" cy="37" r=".53" style="stroke: navy; fill:lightblue; stroke-width: .4px" >
-        <animate id="eye" attributeName="cx" from="71" to="-29" dur="5s" begin="click; smile.begin" fill="freeze" />
-        <animate attributeName="cx" from="101" to="-29" dur="6s" begin=" eye.end" fill="freeze" />
+
+        <circle cx="71" cy="37" r=".53" style="stroke: navy; fill:lightblue; stroke-width: .4px" fill-opacity="1" stroke-opacity="1">
+        <animate id="eye" attributeName="fill-opacity" from="1 " to="0" dur="2s"begin="click; smile.begin" fill="freeze" />
+        <animate id="eye2" attributeName="stroke-opacity" from="1 " to="0" dur="2s"begin="click; smile.begin" fill="freeze" />
+
          </circle>
 
-        <polyline points=" 69.2 , 42   73 , 42   74.5 , 41 " stroke="navy" stroke-width=".5" fill="grey" stroke="navy" stroke-width=".4" stroke-linecap="round" stroke-linejoin="round">
-          <animate id="smile" attributeName="points" from="69.2" to="-28.2" dur="5s" begin="click; sbody.begin" fill="freeze" />
-          <animate attributeName="points" from="100.2" to="-28.2" dur="6s" begin=" esmile.end" fill="freeze" />
+        <polyline points=" 69.2 , 42   73 , 42   74.5 , 41 " stroke="navy" stroke-width=".5" fill="grey" stroke="navy" stroke-width=".4" stroke-linecap="round" stroke-linejoin="round"  fill-opacity="1" stroke-opacity="1">
+          <animate id="smile" attributeName="stroke-opacity" from="1 " to="0" dur="2s" begin="click; body.begin" fill="freeze" />
+            <animate id="smile2" attributeName="fill-opacity" from="1 " to="0" dur="2s" begin="click; body.begin" fill="freeze" />
+
+
         </polyline>
     <!-- Bubbles -->
         <circle cx="10" cy="45" r=".5" style="stroke: black; fill:lightblue; stroke-width: .2px" >
@@ -88,10 +98,14 @@
 
     <text id="title" x="36" y="6" > Under The Sea </text>
 
-    <text  x="50" y="10" text-anchor="middle" opacity="1" style=" font-size: 2px;"> There once was a fish. He was swimming through
-      the ocean looking for dinner. Little did he know that he was going to become dinner.
+    <text  x="50" y="8" text-anchor="middle" opacity="1" style=" font-size: 2px;"> There once was a fish. He was swimming through
+      the ocean looking for dinner. Little did he know but he was going to get eaten.
 <animate attributeName="opacity" from="1" to="0" dur="2s" begin="click" fill="freeze"/>
     </text>
+    <text  x="50" y="10" text-anchor="middle" opacity="1" style=" font-size: 2px;"> In honor of me finally watching finding dory,
+    the background image is the ocean from finding nemo/dory.
+    <animate attributeName="opacity" from="1" to="0" dur="2s" begin="click" fill="freeze"/>
+        </text>
 
 
 <!-- Shark -->
